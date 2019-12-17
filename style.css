@@ -1,0 +1,553 @@
+:root {
+  --border-color: #F5F5F5;
+  --green: #008000;
+}
+
+html {
+  box-sizing: border-box;
+  color: #444;
+  font: normal 16px "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+html > *,
+html > *::before,
+html > *::after {
+  box-sizing: inherit;
+}
+
+body {
+  text-align: center;
+}
+
+section {
+  border-bottom: 1px solid var(--border-color);
+  margin: 30px;
+  padding: 0 0 60px 0;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 100;
+  margin: 60px 0 45px 0;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-weight: 300;
+  line-height: 25px;
+  margin: 0 auto 15px auto;
+  max-width: 960px;
+}
+
+/* ~~~~~ links ~~~~~ */
+a {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* ~~~~~ button ~~~~~ */
+.button {
+  background: var(--green);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  /* display: block; */
+  font-size: inherit;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+
+.button:hover,
+.button:focus {
+  background: #016001;
+  text-decoration: none;
+}
+
+/* ~~~~~ title ~~~~~ */
+.title {
+  background: #016001 url("./images/img_front.jpg") center no-repeat;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+.title h1,
+.title h2 {
+  color: #fff;
+}
+
+.logo {
+  margin: 90px 0 0 0;
+  width: 80px;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.title h2 {
+  font-size: 20px;
+  margin: 0 0 50px 0;
+  text-transform: uppercase;
+}
+
+/* ~~~~~ speakers ~~~~~ */
+.speakers ul {
+  display: grid;
+  grid-gap: 15px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.speakers li {
+  border: 1px solid var(--border-color);
+  max-width: 280px;
+  position: relative;
+}
+
+.speakers img {
+  height: 230px;
+  width: 280px;
+}
+
+.speakers h2 {
+  color: var(--green);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 40px 0 5px 0;
+  text-transform: capitalize;
+}
+
+.speakers p {
+  color: #444;
+  padding-bottom: 35px;
+}
+
+.display-text {
+  opacity: 0;
+          transition: all 0.4s;
+     -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+
+.speaker:hover > .display-text {
+  opacity: 1;
+          transition: all 0.4s;
+     -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+
+.hover-text {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 360px;
+  overflow: hidden;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+}
+
+.hover-text h2 {
+  margin-top: 10px;
+}
+
+.hover-text p {
+  color: #fff;
+  font-size: 0.8125rem;
+  line-height: normal;
+}
+
+/* ~~~~~ schedule ~~~~~~ */
+.time,
+.event-title,
+.speaker-link,
+.tag {
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+.event-title {
+  margin-right: 10px;
+}
+
+.speaker-link {
+  margin-bottom: 15px;
+}
+
+.time,
+.event-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.speaker-link a {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.schedule img {
+  width: 80px;
+}
+
+.event {
+  display: flex;
+  flex-wrap: wrap;
+  flex: auto;
+}
+
+.tag {
+  text-align: left;
+}
+
+.tag > li {
+  background: #eee;
+  border: 1px solid #AAA;
+  display: inline-block;
+  font-size: 7px;
+  padding: 4px;
+  vertical-align: 2px;
+}
+
+.schedule-block {
+  border-top: 1px solid var(--border-color);
+  display: grid;
+  grid-template-areas: "event time";
+  grid-template-columns: auto 75px;
+  grid-template-rows: repeat(3, auto);
+  padding: 10px;
+}
+
+.schedule-block:last-child {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.event,
+.speaker-link,
+.schedule figure {
+  justify-self: start;
+}
+
+.time {
+  grid-column: time;
+  justify-self: end;
+}
+
+.schedule figure {
+  grid-row: 1;
+}
+
+.event {
+  grid-column: event / span 2;
+  grid-row: 2;
+}
+
+.speaker-link {
+  grid-row: 3;
+}
+
+/* ~~~~~ location ~~~~~~ */
+.location  p {
+  text-align: left;
+}
+
+.hotel {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.location img {
+  margin-bottom: 30px;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+/* ~~~~~ call for papers ~~~~~~ */
+.papers {
+  margin: 0 auto;
+  max-width: 960px;
+  text-align: left;
+}
+
+.papers h1 {
+  text-align: center;
+}
+
+.papers button {
+  margin: 0 0 12px 20px;
+}
+
+.papers p {
+  padding: 0 20px;
+}
+
+/* ~~~~~ sponsors ~~~~~~ */
+.sponsor-wrapper > section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h3 {
+  flex: 1 0 100%;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 auto 20px auto;
+  text-align: left;
+}
+
+.sponsors,
+.sponsor-wrapper > section {
+  border: none;
+  margin-bottom: 30px;
+  padding-bottom: 0;
+}
+
+.sponsors img {
+  margin-bottom: 25px;
+  padding: 0 10px 0 0px;
+}
+
+.platinum img,
+.gold img {
+  width: 300px;
+}
+
+.silver img {
+  width: 250px;
+}
+
+.support img {
+  width: 180px;
+}
+
+/* ~~~~~ footer ~~~~~ */
+footer {
+  background: #000 url("images/img_footer.jpg") center no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 340px;
+}
+
+footer h1 {
+  font-size: 2.25rem;
+  font-weight: 100;
+  margin: 0 0 30px 0;
+  padding: 30px 0 0 0;
+}
+
+footer h3 {
+  font-size: 2rem;
+  margin: 10px 0 5px 0;
+  text-transform: uppercase;
+}
+
+.team {
+  background: rgba(0, 0, 0, 0.75);
+  border: none;
+  margin: 0;
+  padding: 10px 10px 20px 10px;
+  text-align: left;
+}
+
+.team-wrapper {
+  width: 100%;
+}
+
+/* EXTRA SMALL SCREENS */
+@media screen and (min-width: 634px) {
+  .speakers ul {
+    grid-template-columns: repeat(2, 280px);
+  }
+}
+
+@media screen and (max-width: 653px) {
+  /* ~~~~~ nav ~~~~~ */
+  nav {
+    display: none;
+  }
+}
+
+/* SMALL SCREENS */
+@media screen and (min-width: 654px) {
+  /* ~~~~~ title ~~~~~ */
+  .logo {
+    margin: 150px 0 0 0;
+  }
+
+  .title h1 {
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+  }
+
+  .title h2 {
+    font-size: 20px;
+  }
+
+  /* ~~~~ schedule  ~~~~ */
+  .schedule-block {
+    align-items: center;
+    grid-template-columns: 75px auto 150px;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .time {
+    grid-column: 1;
+    grid-row: span 2;
+    justify-self: start;
+    margin: 20px 0;
+  }
+
+  .event > * {
+    display: inline-block;
+    margin-top: 0;
+    vertical-align: middle;
+  }
+
+  .event {
+    margin-top: 20px;
+  }
+
+  figure + .event {
+    margin-top: 0;
+  }
+
+  .event,
+  .speaker-link {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .speaker-link {
+    margin-bottom: 20px;
+    position: relative;
+    top: 40px;
+  }
+
+  .schedule figure {
+    grid-column: 3;
+    justify-self: right;
+  }
+
+  .schedule img {
+    width: 130px;
+  }
+
+  /* ~~~~ footer  ~~~~ */
+  footer > h1 {
+    margin: 0;
+    padding: 30px 0 20px 0;
+  }
+}
+
+/* MEDIUM SCREENS */
+@media screen and (min-width: 655px) {
+  /* nav */
+  nav {
+    background: #fff;
+    border-top: 10px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 656px;
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 0 27px;
+  }
+
+  nav a {
+    color: inherit;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 44px;
+    text-transform: uppercase;
+  }
+
+  /* title */
+  .title {
+    background-position: bottom;
+    height: 483px;
+  }
+
+  .logo {
+    margin-top: 213px;
+  }
+
+  .title h1 {
+    font-size: 4.5rem;
+    margin-top: 20px;
+  }
+
+  .title h2 {
+    font-size: 1.875rem;
+    padding-bottom: 60px;
+  }
+
+  /* sponsors */
+  .sponsors {
+    margin: 0 30px;
+  }
+
+  /* footer */
+  footer > h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 45px 0 30px 0;
+  }
+
+  .team-wrapper {
+    margin: 0 auto;
+    width: 650px;
+  }
+}
+
+/* LARGE SCREENS */
+@media screen and (min-width: 731px) {
+  /* nav */
+  nav ul {
+    justify-content: space-around;
+    width: 650px;
+  }
+
+  /* footer */
+  .team-wrapper {
+    width: 960px;
+  }
+}
+
+/* EXTRA LARGE SCREENS */
+@media screen and (min-width: 906px) {
+  /* nav */
+  nav ul {
+    width: 950px;
+  }
+
+  /* speakers */
+  .speakers ul {
+    grid-template-columns: repeat(3, 280px);
+  }
+}
